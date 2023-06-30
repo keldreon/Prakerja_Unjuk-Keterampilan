@@ -1,91 +1,73 @@
+// Copyright (c) 2019, the Dart project authors.  Please see the AUTHORS file
+// for details. All rights reserved. Use of this source code is governed by a
+// BSD-style license that can be found in the LICENSE file.
+
 import 'package:flutter/material.dart';
-import 'package:unjuk_keterampilan/theme/theme.dart';
 
-/*
-https://www.figma.com/community/file/1160051068328867627/Traveling-Mobile-app---Pickolab-Studio
+void main() => runApp(const MyApp());
 
-https://www.figma.com/community/file/1175106010672013724/Ecommerce-App-UI-Kit
-
-https://www.figma.com/community/file/1176632391018692033/Plant-E-Commerce-%26-Online-Store-App-UI-Kit
-
-https://www.figma.com/community/file/1043052073261558633/Plant-Care-App
-
-*/
-
-void main() {
-  runApp(const MainApp());
-}
-
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: AppTheme.theme,
-      title: 'Plantscape',
-      home: const MyHomePage(title: 'Plantscape'),
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
   final String title;
+
+  const MyHomePage({
+    Key? key,
+    required this.title,
+  }) : super(key: key);
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Pallete.whiteColor,
-        forceMaterialTransparency: true,
-        title: Text(
-          widget.title,
-          style: const TextStyle(
-            fontFamily: 'Quicksand',
-            color: Pallete.greenColor,
-          ),
-        ),
-        centerTitle: false,
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.notifications_none_outlined,
-                color: Pallete.unSelectedIcon),
-          ),
-          IconButton(onPressed: () {}, icon: const Icon(Icons.segment))
-        ],
+        title: Text(widget.title),
       ),
-      body: const Center(
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
+          children: [
+            const Text(
+              'You have pushed the button this many times:',
+            ),
             Text(
-              'You are in Home',
+              '$_counter',
+              style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Pallete.whiteColor,
-          selectedItemColor: Pallete.selectedIcon,
-          unselectedItemColor: Pallete.unSelectedIcon,
-          items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.favorite_border_outlined), label: 'Favorite'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.shopping_bag_outlined), label: 'List'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.person_2_outlined), label: 'Account'),
-          ]),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ),
     );
   }
 }
