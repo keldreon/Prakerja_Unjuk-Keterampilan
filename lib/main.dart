@@ -33,6 +33,13 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  int _selectedIndex = 0;
+
+  void _onItemTapped(int index) {
+    _selectedIndex = index;
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,24 +64,32 @@ class _MyHomePageState extends State<MyHomePage> {
                 filled: true),
           ),
         ),
+        Container(
+          padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+          child: Text(
+            'Collection for You',
+            style: TextStyle(fontSize: 20),
+          ),
+        ),
       ]),
       bottomNavigationBar: BottomNavigationBar(
         items: [
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
               icon: Icon(Icons.search_outlined),
               label: "Discover",
               activeIcon: Icon(Icons.search)),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
               icon: Icon(Icons.storefront_outlined),
               label: "Store",
               activeIcon: Icon(Icons.storefront)),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
               icon: Icon(Icons.person_outlined),
               label: "Profile",
               activeIcon: Icon(Icons.person)),
         ],
         showSelectedLabels: false,
         showUnselectedLabels: false,
+        onTap: _onItemTapped,
       ),
     );
   }
