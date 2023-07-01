@@ -8,7 +8,7 @@ class Scan extends StatelessWidget {
     return MaterialApp(
       title: 'Scan Items',
       home: ListView(
-        children: [],
+        children: const [],
       ),
     );
   }

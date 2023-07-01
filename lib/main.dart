@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:unjuk_keterampilan/components/discover.dart';
 
+import 'components/profile.dart';
+
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
@@ -97,10 +99,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: Colors.green,
                 child: const Center(child: Text("Store"))));
       case "Profile":
-        return MaterialPageRoute(
-            builder: (context) => Container(
-                color: Colors.red,
-                child: const Center(child: Text("Profile"))));
+        return MaterialPageRoute(builder: (context) => const ProfileWidget());
       default:
         return MaterialPageRoute(
             builder: (context) => const DiscoverWidget(
