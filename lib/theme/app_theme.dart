@@ -7,13 +7,15 @@ import 'package:unjuk_keterampilan/theme/pallete.dart';
 class AppTheme {
   static ThemeData theme = ThemeData.light().copyWith(
     useMaterial3: true,
-    scaffoldBackgroundColor: Pallete.greyColor2,
+    scaffoldBackgroundColor: Pallete.whiteColor2,
     appBarTheme: const AppBarTheme(
       backgroundColor: Pallete.whiteColor,
       elevation: 0,
     ),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-      backgroundColor: Pallete.greenColor,
+      backgroundColor: Pallete.whiteColor,
+      unselectedItemColor: Pallete.unselected,
+      selectedItemColor: Pallete.greenColor,
     ),
   );
 }
