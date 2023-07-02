@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:unjuk_keterampilan/components/discoverNav/featured_items.dart';
 import 'package:unjuk_keterampilan/components/discoverNav/scan.dart';
+import 'package:unjuk_keterampilan/theme/theme.dart';
 
 class DiscoverWidget extends StatefulWidget {
   final String title;
@@ -28,13 +29,13 @@ class _DiscoverWidgetState extends State<DiscoverWidget> {
         ),
       ),
       Padding(
-        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
         child: TextField(
           decoration: InputDecoration(
               hintText: 'Search',
               border: InputBorder.none,
-              contentPadding: EdgeInsets.all(15),
-              prefixIcon: Icon(Icons.search_outlined),
+              contentPadding: const EdgeInsets.all(15),
+              prefixIcon: const Icon(Icons.search_outlined),
               suffixIcon: IconButton(
                   onPressed: () {
                     Navigator.of(context)
@@ -53,7 +54,7 @@ class _DiscoverWidgetState extends State<DiscoverWidget> {
         height: 200,
         child: ListView(
             shrinkWrap: true,
-            physics: ScrollPhysics(),
+            physics: const ScrollPhysics(),
             scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
             children: <Widget>[
@@ -61,6 +62,7 @@ class _DiscoverWidgetState extends State<DiscoverWidget> {
               Container(
                 width: 160,
                 color: Colors.red,
+                child: Row(children: []),
               ),
               Container(
                 width: 160,
@@ -95,7 +97,7 @@ class _DiscoverWidgetState extends State<DiscoverWidget> {
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
             ),
-            subtitle: Row(
+            subtitle: const Row(
               children: [
                 Text(
                   '\$ 2.00',
@@ -112,7 +114,7 @@ class _DiscoverWidgetState extends State<DiscoverWidget> {
                     MaterialPageRoute(builder: (_) => const FeaturedItems()));
               },
               icon: Icon(MdiIcons.plus),
-              color: Colors.blue,
+              color: Pallete.greenColor,
               iconSize: 35,
               alignment: Alignment.center,
             ),
@@ -129,7 +131,7 @@ class _DiscoverWidgetState extends State<DiscoverWidget> {
         height: 200,
         child: ListView(
             shrinkWrap: true,
-            physics: ScrollPhysics(),
+            physics: const ScrollPhysics(),
             scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
             children: <Widget>[
