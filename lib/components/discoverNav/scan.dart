@@ -30,14 +30,17 @@ class Scan extends StatelessWidget {
             children: [
               Container(
                 width: MediaQuery.of(context).size.width,
-                height: Image.asset('assets/img/Image2.jpg').height,
+                height: MediaQuery.of(context).size.height * 0.4,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
                     fit: BoxFit.fitWidth,
                     image: AssetImage('img/whitebar.jpg'),
                   ),
                 ),
-                child: Image.asset('assets/img/Image2.jpg'),
+                child: Image.asset(
+                  'assets/img/Image2.jpg',
+                  fit: BoxFit.fill,
+                ),
               ),
               Container(
                 margin: const EdgeInsets.fromLTRB(15, 15, 30, 0),
@@ -49,6 +52,7 @@ class Scan extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Card(
+                  surfaceTintColor: Pallete.whiteColor,
                   child: ListTile(
                     titleAlignment: ListTileTitleAlignment.center,
                     leading: Image.asset('assets/img/Image3.jpg'),
