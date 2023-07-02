@@ -29,7 +29,20 @@ class _FeaturedItemsState extends State<FeaturedItems> {
               ),
             ),
           ),
-          body: const Text('Items here'),
+          body: SafeArea(
+            top: false,
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              height: Image.asset('assets/img/unsplash_grjHFqaCLCg.png').height,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  fit: BoxFit.fitWidth,
+                  image: AssetImage('img/whitebar.jpg'),
+                ),
+              ),
+              child: Image.asset('assets/img/unsplash_grjHFqaCLCg.png'),
+            ),
+          ),
         ));
   }
 }
