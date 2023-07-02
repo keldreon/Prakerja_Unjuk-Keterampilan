@@ -7,8 +7,13 @@ class Scan extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Scan Items',
-      home: ListView(
-        children: [],
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Scan Items'),
+        ),
+        body: Column(
+          children: [Image.asset('assets/img/Image2.jpg')],
+        ),
       ),
     );
   }
