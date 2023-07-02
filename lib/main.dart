@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:unjuk_keterampilan/components/discover.dart';
+
+import 'theme/theme.dart';
 
 void main() => runApp(const MyApp());
 
@@ -11,10 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Shop Fresh',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
-        useMaterial3: true,
-      ),
+      theme: AppTheme.theme,
       home: const MyHomePage(title: 'Discover'),
     );
   }

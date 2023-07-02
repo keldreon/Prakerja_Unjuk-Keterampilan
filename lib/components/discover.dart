@@ -89,7 +89,7 @@ class _DiscoverWidgetState extends State<DiscoverWidget> {
         child: Card(
           child: ListTile(
             titleAlignment: ListTileTitleAlignment.center,
-            leading: FlutterLogo(size: 35.0),
+            leading: const FlutterLogo(size: 35.0),
             title: const Text(
               'Juice',
               maxLines: 2,
