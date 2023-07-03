@@ -26,7 +26,7 @@ class _StoreWidgetState extends State<StoreWidget> {
                 surfaceTintColor: Pallete.whiteColor,
                 child: ListTile(
                   titleAlignment: ListTileTitleAlignment.center,
-                  leading: Image.asset('/img/Image-dp.jpg'),
+                  leading: Image.asset('assets/img/Image-dp.jpg'),
                   title: const Text(
                     'Mason, Ohio',
                     maxLines: 2,
@@ -45,7 +45,7 @@ class _StoreWidgetState extends State<StoreWidget> {
               child: const Text('Shop by Category'),
             ),
             const CategoryCard(
-                name: 'Product', imgDir: '/img/Image-product.jpg'),
+                name: 'Product', imgDir: 'assets/img/Image-product.jpg'),
           ],
         ),
       ),
