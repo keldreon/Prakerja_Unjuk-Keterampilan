@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:unjuk_keterampilan/components/discoverNav/scan.dart';
+import 'package:unjuk_keterampilan/components/widgets/store/category_card.dart';
 import 'package:unjuk_keterampilan/theme/app_theme.dart';
 import 'package:unjuk_keterampilan/theme/pallete.dart';
 
@@ -61,22 +62,8 @@ class _StoreWidgetState extends State<StoreWidget> {
               margin: const EdgeInsets.fromLTRB(15, 15, 0, 0),
               child: const Text('Shop by Category'),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Card(
-                surfaceTintColor: Pallete.whiteColor,
-                child: ListTile(
-                  titleAlignment: ListTileTitleAlignment.center,
-                  leading: Image.asset('/img/Image-product.jpg'),
-                  title: const Text(
-                    'Produce',
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(fontSize: 17),
-                  ),
-                ),
-              ),
-            ),
+            const CategoryCard(
+                name: 'Product', imgDir: '/img/Image-product.jpg'),
           ],
         ),
       ),
