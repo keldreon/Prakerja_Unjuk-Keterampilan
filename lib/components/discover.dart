@@ -28,13 +28,13 @@ class _DiscoverWidgetState extends State<DiscoverWidget> {
         ),
       ),
       Padding(
-        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
         child: TextField(
           decoration: InputDecoration(
               hintText: 'Search',
               border: InputBorder.none,
-              contentPadding: EdgeInsets.all(15),
-              prefixIcon: Icon(Icons.search_outlined),
+              contentPadding: const EdgeInsets.all(15),
+              prefixIcon: const Icon(Icons.search_outlined),
               suffixIcon: IconButton(
                   onPressed: () {
                     Navigator.of(context)
@@ -53,7 +53,7 @@ class _DiscoverWidgetState extends State<DiscoverWidget> {
         height: 200,
         child: ListView(
             shrinkWrap: true,
-            physics: ScrollPhysics(),
+            physics: const ScrollPhysics(),
             scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
             children: <Widget>[
@@ -89,13 +89,13 @@ class _DiscoverWidgetState extends State<DiscoverWidget> {
         child: Card(
           child: ListTile(
             titleAlignment: ListTileTitleAlignment.center,
-            leading: FlutterLogo(size: 35.0),
+            leading: const FlutterLogo(size: 35.0),
             title: const Text(
               'Juice',
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
             ),
-            subtitle: Row(
+            subtitle: const Row(
               children: [
                 Text(
                   '\$ 2.00',
@@ -129,7 +129,7 @@ class _DiscoverWidgetState extends State<DiscoverWidget> {
         height: 200,
         child: ListView(
             shrinkWrap: true,
-            physics: ScrollPhysics(),
+            physics: const ScrollPhysics(),
             scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
             children: <Widget>[
