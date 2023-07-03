@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:unjuk_keterampilan/theme/theme.dart';
-import 'package:unjuk_keterampilan/widgets/discover/discover_card.dart';
-import 'package:unjuk_keterampilan/widgets/discover/discover_card_large.dart';
+import 'package:unjuk_keterampilan/components/widgets/discover/discover_card.dart';
+import 'package:unjuk_keterampilan/components/widgets/discover/discover_card_large.dart';
 
 class FeaturedItems extends StatefulWidget {
   const FeaturedItems({super.key});

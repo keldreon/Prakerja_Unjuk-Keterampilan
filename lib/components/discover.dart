@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:unjuk_keterampilan/components/discoverNav/scan.dart';
-import 'package:unjuk_keterampilan/widgets/discover/discover_card.dart';
-import 'package:unjuk_keterampilan/widgets/discover/discover_item_card_discount.dart';
+import 'package:unjuk_keterampilan/components/widgets/discover/discover_card.dart';
+import 'package:unjuk_keterampilan/components/widgets/discover/discover_item_card_discount.dart';
 
 class DiscoverWidget extends StatefulWidget {
   final String title;
