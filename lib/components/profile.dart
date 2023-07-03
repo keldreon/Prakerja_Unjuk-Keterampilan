@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:unjuk_keterampilan/components/profileNav/accordion.dart';
+import 'package:unjuk_keterampilan/components/widgets/profile/card_setting.dart';
+import 'package:unjuk_keterampilan/components/widgets/profile/identity.dart';
 import 'package:unjuk_keterampilan/theme/theme.dart';
 
 class ProfileWidget extends StatefulWidget {
@@ -18,22 +20,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
       home: Scaffold(
         body: ListView(
           children: [
-            const Padding(
-              padding: EdgeInsets.fromLTRB(15, 30, 15, 0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Grace Ficke',
-                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    'grace@atomicrobot.com',
-                    style: TextStyle(fontSize: 20),
-                  ),
-                ],
-              ),
-            ),
+            const Identity(name: 'Grace Ficke', email: 'grace@atomicrobot.com'),
             const Padding(
                 padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
                 child: Accordion(
@@ -73,68 +60,10 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
-              child: Card(
-                surfaceTintColor: Colors.transparent,
-                child: ListTile(
-                  titleAlignment: ListTileTitleAlignment.center,
-                  title: const Text(
-                    'Notifications',
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                  trailing: IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.navigate_next),
-                    color: Pallete.unselected,
-                    iconSize: 30,
-                    alignment: Alignment.center,
-                  ),
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
-              child: Card(
-                surfaceTintColor: Colors.transparent,
-                child: ListTile(
-                  titleAlignment: ListTileTitleAlignment.center,
-                  title: const Text(
-                    'App Feedback',
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                  trailing: IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.navigate_next),
-                    color: Pallete.unselected,
-                    iconSize: 30,
-                    alignment: Alignment.center,
-                  ),
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
-              child: Card(
-                surfaceTintColor: Colors.transparent,
-                child: ListTile(
-                  titleAlignment: ListTileTitleAlignment.center,
-                  title: const Text(
-                    'Privacy Policy',
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                  trailing: IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.navigate_next),
-                    color: Pallete.unselected,
-                    iconSize: 30,
-                    alignment: Alignment.center,
-                  ),
-                ),
-              ),
+            const SettingWidget(title: 'Notifications'),
+            const SettingWidget(title: 'App Feedback'),
+            const SettingWidget(
+              title: 'Privacy Policy',
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(15, 10, 15, 10),
