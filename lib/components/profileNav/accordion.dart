@@ -25,7 +25,7 @@ class _AccordionState extends State<Accordion> {
         ListTile(
           //image harus clip rect dikit
           titleAlignment: ListTileTitleAlignment.top,
-          leading: Image.asset('/img/Image-dp.jpg'),
+          leading: Image.asset('assets/img/Image-dp.jpg'),
           title: Text(widget.title),
           subtitle: const Text('3826 Lowndes Hill Park Road,\nMason, CA 91040'),
           trailing: IconButton(
