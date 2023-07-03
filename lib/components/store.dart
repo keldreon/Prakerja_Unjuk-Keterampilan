@@ -46,6 +46,13 @@ class _StoreWidgetState extends State<StoreWidget> {
             ),
             const CategoryCard(
                 name: 'Product', imgDir: 'assets/img/Image-product.jpg'),
+            const CategoryCard(
+                name: 'Bakery', imgDir: 'assets/img/Image-ss2.png'),
+            const CategoryCard(name: 'Dairy', imgDir: 'assets/img/Image-2.png'),
+            const CategoryCard(
+                name: 'Ice Cream', imgDir: 'assets/img/Image-3.png'),
+            const CategoryCard(
+                name: 'Cheese', imgDir: 'assets/img/Image-4.png'),
           ],
         ),
       ),
