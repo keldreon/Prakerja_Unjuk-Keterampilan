@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:unjuk_keterampilan/theme/theme.dart';
 
-import '../discoverNav/scan.dart';
+import 'package:unjuk_keterampilan/components/discoverNav/scan.dart';
 
 class SearchWidget extends StatelessWidget {
   const SearchWidget({
@@ -25,7 +25,7 @@ class SearchWidget extends StatelessWidget {
                       .push(MaterialPageRoute(builder: (_) => const Scan()));
                 },
                 icon: Icon(MdiIcons.barcodeScan)),
-            fillColor: Pallete.searchBarColor,
+            fillColor: Pallete.whiteColor,
             filled: true),
       ),
     );
