@@ -54,7 +54,7 @@ class _StoreWidgetState extends State<StoreWidget> {
                               MaterialPageRoute(builder: (_) => const Scan()));
                         },
                         icon: Icon(MdiIcons.barcodeScan)),
-                    fillColor: Pallete.whiteColor,
+                    fillColor: Pallete.searchBarColor,
                     filled: true),
               ),
             ),
