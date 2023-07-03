@@ -79,7 +79,7 @@ class _DiscoverWidgetState extends State<DiscoverWidget> {
                         color: Pallete.whiteColor,
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
-                              horizontal: 15.0, vertical: 15.0),
+                              horizontal: 5.0, vertical: 5.0),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
@@ -131,8 +131,7 @@ class _DiscoverWidgetState extends State<DiscoverWidget> {
                                     const SizedBox(
                                       width: 30,
                                     ),
-                                    Expanded(
-                                        child: TextButton(
+                                    TextButton(
                                       style: TextButton.styleFrom(
                                           backgroundColor: Pallete.greenColor),
                                       onPressed: () {},
@@ -142,7 +141,7 @@ class _DiscoverWidgetState extends State<DiscoverWidget> {
                                             color: Pallete.whiteColor2,
                                             fontWeight: FontWeight.w300),
                                       ),
-                                    ))
+                                    )
                                   ],
                                 ),
                               )
@@ -165,7 +164,7 @@ class _DiscoverWidgetState extends State<DiscoverWidget> {
             surfaceTintColor: Pallete.whiteColor,
             child: ListTile(
               titleAlignment: ListTileTitleAlignment.center,
-              leading: Image.asset('/img/kyaw-tun.png'),
+              leading: Image.asset('assets/img/kyaw-tun.png'),
               title: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -297,8 +296,7 @@ class _DiscoverWidgetState extends State<DiscoverWidget> {
                                 const SizedBox(
                                   width: 30,
                                 ),
-                                Expanded(
-                                    child: TextButton(
+                                TextButton(
                                   style: TextButton.styleFrom(
                                       backgroundColor: Pallete.greenColor),
                                   onPressed: () {},
@@ -308,7 +306,7 @@ class _DiscoverWidgetState extends State<DiscoverWidget> {
                                         color: Pallete.whiteColor2,
                                         fontWeight: FontWeight.w300),
                                   ),
-                                ))
+                                )
                               ],
                             ),
                           )
@@ -321,5 +319,10 @@ class _DiscoverWidgetState extends State<DiscoverWidget> {
         ),
       ]),
     );
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
   }
 }

@@ -27,10 +27,10 @@ class _FeaturedItemsState extends State<FeaturedItems> {
                     decoration: const BoxDecoration(
                       image: DecorationImage(
                         fit: BoxFit.fitWidth,
-                        image: AssetImage('img/whitebar.jpg'),
+                        image: AssetImage('assets/img/whitebar.jpg'),
                       ),
                     ),
-                    child: Image.asset('img/unsplash_grjHFqaCLCg.png',
+                    child: Image.asset('assets/img/unsplash_grjHFqaCLCg.png',
                         fit: BoxFit.cover),
                   ),
                   Padding(
@@ -184,7 +184,7 @@ class _FeaturedItemsState extends State<FeaturedItems> {
                                                 borderRadius:
                                                     BorderRadius.circular(20),
                                                 child: Image.asset(
-                                                  '/img/Image.png',
+                                                  'assets/img/Image.png',
                                                   height: 100,
                                                   fit: BoxFit.contain,
                                                   width: double.infinity,
@@ -284,5 +284,10 @@ class _FeaturedItemsState extends State<FeaturedItems> {
             ),
           ]),
         ));
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
   }
 }

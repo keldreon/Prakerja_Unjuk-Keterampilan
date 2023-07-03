@@ -34,7 +34,7 @@ class Scan extends StatelessWidget {
                 decoration: const BoxDecoration(
                   image: DecorationImage(
                     fit: BoxFit.fitWidth,
-                    image: AssetImage('img/whitebar.jpg'),
+                    image: AssetImage('assets/img/whitebar.jpg'),
                   ),
                 ),
                 child: Image.asset(
