@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:unjuk_keterampilan/theme/theme.dart';
 
 class Accordion extends StatefulWidget {
   final String title;
@@ -17,16 +18,14 @@ class _AccordionState extends State<Accordion> {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Colors.white,
+      surfaceTintColor: Pallete.whiteColor,
       margin: const EdgeInsets.all(5),
       child: Column(children: [
         // The title
         ListTile(
           //image harus clip rect dikit
           titleAlignment: ListTileTitleAlignment.top,
-          leading: const FlutterLogo(
-            size: 20,
-          ),
+          leading: Image.asset('/img/Image-dp.jpg'),
           title: Text(widget.title),
           subtitle: const Text('3826 Lowndes Hill Park Road,\nMason, CA 91040'),
           trailing: IconButton(
@@ -45,13 +44,13 @@ class _AccordionState extends State<Accordion> {
             ? Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(35, 0, 35, 0),
+                    padding: const EdgeInsets.fromLTRB(45, 0, 45, 0),
                     child: Container(
                       padding: const EdgeInsets.symmetric(
                           vertical: 15, horizontal: 15),
                       child: Text(
                         widget.content,
-                        style: const TextStyle(color: Colors.green),
+                        style: const TextStyle(color: Pallete.greenColor),
                       ),
                     ),
                   ),
