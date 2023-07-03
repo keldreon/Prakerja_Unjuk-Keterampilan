@@ -13,6 +13,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: AppTheme.theme,
       home: Scaffold(
         body: ListView(
@@ -59,6 +60,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
             const Padding(
               padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
               child: Card(
+                surfaceTintColor: Pallete.whiteColor,
                 child: ListTile(
                   titleAlignment: ListTileTitleAlignment.center,
                   title: Text(
@@ -74,6 +76,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
             Padding(
               padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
               child: Card(
+                surfaceTintColor: Colors.transparent,
                 child: ListTile(
                   titleAlignment: ListTileTitleAlignment.center,
                   title: const Text(
@@ -84,7 +87,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                   trailing: IconButton(
                     onPressed: () {},
                     icon: const Icon(Icons.navigate_next),
-                    color: Colors.blue,
+                    color: Pallete.unselected,
                     iconSize: 30,
                     alignment: Alignment.center,
                   ),
@@ -94,6 +97,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
             Padding(
               padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
               child: Card(
+                surfaceTintColor: Colors.transparent,
                 child: ListTile(
                   titleAlignment: ListTileTitleAlignment.center,
                   title: const Text(
@@ -104,7 +108,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                   trailing: IconButton(
                     onPressed: () {},
                     icon: const Icon(Icons.navigate_next),
-                    color: Colors.blue,
+                    color: Pallete.unselected,
                     iconSize: 30,
                     alignment: Alignment.center,
                   ),
@@ -114,6 +118,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
             Padding(
               padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
               child: Card(
+                surfaceTintColor: Colors.transparent,
                 child: ListTile(
                   titleAlignment: ListTileTitleAlignment.center,
                   title: const Text(
@@ -124,7 +129,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                   trailing: IconButton(
                     onPressed: () {},
                     icon: const Icon(Icons.navigate_next),
-                    color: Colors.blue,
+                    color: Pallete.unselected,
                     iconSize: 30,
                     alignment: Alignment.center,
                   ),
@@ -136,7 +141,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     shape: const StadiumBorder(),
-                    backgroundColor: Colors.blue,
+                    backgroundColor: Pallete.redColor,
                     padding: const EdgeInsets.symmetric(
                         horizontal: 40, vertical: 14),
                   ),
@@ -144,7 +149,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                   child: const Text(
                     'Log Out',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Pallete.whiteColor,
                       fontSize: 22,
                     ),
                   )),
@@ -152,7 +157,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
             const Center(
               child: Text(
                 'Version 0.0.0',
-                style: TextStyle(fontSize: 15),
+                style: TextStyle(fontSize: 14, color: Pallete.unselected),
               ),
             )
           ],
